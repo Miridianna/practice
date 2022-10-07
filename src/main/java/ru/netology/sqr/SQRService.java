@@ -1,10 +1,14 @@
+package ru.netology.sqr;
 public class SQRService {
     public int calcSquareRoots(int start, int finish) {
+        int count = 0;
         for (int i = 10; i <= 99; i++) {
             if (i * i >= start) {
-                return i;
+                if (i * i <= finish) {
+                    count ++;
+                }
             }
         }
-        return -1;
+        return count;
     }
 }
